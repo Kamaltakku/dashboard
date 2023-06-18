@@ -11,13 +11,13 @@
     ]
 </script>
 
-<div class="w-full max-w-sm p-4 bg-white rounded-xl shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
-    <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
+<div class="grid bg-surface-100-700-token w-full max-w-sm p-4 rounded-xl sm:p-6">
+    <h5 class="mb-3">
         {groupName}
     </h5>
-    <p class="text-sm font-normal text-gray-500 dark:text-gray-400">{description}</p>
+    <p class="text-sm font-normal">{description}</p>
     {#each links as link}
-        <ul class="my-4 space-y-3">
+        <ul class="my-2 space-y-2 border rounded-token border-token">
             <li>
                 <Website {...link}/>
             </li>
