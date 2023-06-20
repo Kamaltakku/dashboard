@@ -14,19 +14,16 @@
         <DashboardHeader/>
     </svelte:fragment>
     <slot>
-        <div class="h-screen">
-            <div class="grid justify-items-center p-10">
-                <div class="grid shadow-2xl grid-cols-3 gap-2">
-                    {#each items as item (item.groupName)}
-                        <GroupItem {...item}/>
-                    {/each}
-                </div>
-
+        <div class="grid auto-rows-max justify-items-center p-10 variant-filled-primary min-h-full">
+            <div class="grid grid-cols-3 gap-20 rounded-xl">
+                {#each items as item (item.groupName)}
+                    <GroupItem {...item}/>
+                {/each}
             </div>
         </div>
     </slot>
     <svelte:fragment slot="footer">
-        <div class="">A ma footer</div>
+        <div class="variant-filled-primary">A ma footer</div>
     </svelte:fragment>
 
 </AppShell>
